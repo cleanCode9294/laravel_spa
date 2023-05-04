@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Person;
 
-use App\Http\Resources\Person\PersonResource;
 use App\Models\Person;
 
-class ShowController
+class DeleteController
 {
     public function __invoke(Person $person)
     {
-        return new PersonResource($person);
+        $person->delete();
+        return $person;
     }
 }

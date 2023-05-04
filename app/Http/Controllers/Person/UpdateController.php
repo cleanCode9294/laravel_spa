@@ -11,6 +11,6 @@ class UpdateController
     {
         $data = $request->validated();
         $person->update($data);
-        return $person;
+        return response([]);
     }
 }

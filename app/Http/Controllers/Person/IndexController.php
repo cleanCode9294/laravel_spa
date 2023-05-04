@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Person;
 
+use App\Http\Resources\Person\PersonResource;
 use App\Models\Person;
 
 class IndexController
@@ -9,6 +10,6 @@ class IndexController
     public function __invoke()
     {
         $people = Person::all();
-        return $people;
+        return PersonResource::collection($people);
     }
 }

@@ -23,4 +23,5 @@ Route::group(['namespace'=> 'person', 'prefix'=> 'people'], function (){
     Route::get('/', 'IndexController');
     Route::get('/{person}', 'ShowController');
     Route::post('/{person}', 'UpdateController');
+    Route::delete('/{person}', 'DeleteController');
 });
